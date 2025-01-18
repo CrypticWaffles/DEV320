@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miles Griffith">
-    <meta name="description" content="CSI443 Website. Text here shows up in search engine results.">
-    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="description" content="Miles Griffith's personal website showcasing his biography, education, and experience.">
+    <meta name="keywords" content="Miles Griffith, Software Development, Bellevue College, Biography, Education, Experience">
+    <title>Miles Griffith - Software Development Student</title>
 
-    <title>Miles Griffith</title>
-
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 3 CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Internal CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="container-fluid">
-
-        <!-- Header Section -->
-        <div class="row mb-4">
-            <div class="col-12 d-flex align-items-center">
-                <img src="img/milesgriffith.jpeg" alt="Miles Griffith" class="img-fluid" style="height:250px; margin-right:10px;">
-                <p class="mb-0">
-                    <strong>Miles Griffith</strong><br>
-                    <a href="mailto:miles.griffith@bellevuecollege.edu">miles.griffith@bellevuecollege.edu</a>
-                </p>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Miles Griffith</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/resources.html">Resources</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
+    </header>
 
-        <!-- Bio Section -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="h5"><strong>Bio</strong></h2>
-                <p>
-                    Hello, I'm Miles Griffith, a 21 year old Software Development student. 
-                    I'm a junior at Bellevue College, currently enrolled in the Software Development Bachelor's program. 
-                    I'm interested in software Development and have been learning since my sophomore year in highschool. 
-                </p>
-                <p>
-                    Outside of school, I enjoy reading various sci-fi and fantasy novels. My favorite webnovel is <i>The Lord of the Mysteries</i> by <i>Yuan Ye</i>.
-                    I also enjoy playing video games and watching movies.
-                </p>
-            </div>
-        </div>
+    <main>
+        <div class="container-fluid">
+            <!-- Header Section -->
+            <section class="row">
+                <div class="col-md-12">
+                    <img src="img/milesgriffith.jpeg" alt="Miles Griffith" class="img-fluid" style="height:250px; margin-right:10px;">
+                    <p class="mb-0">
+                        <strong>Miles Griffith</strong><br>
+                        <a href="mailto:miles.griffith@bellevuecollege.edu">miles.griffith@bellevuecollege.edu</a>
+                    </p>
+                </div>
+            </section>
 
-        <!-- Education Section -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="h5"><strong>Education</strong></h2>
-                <p>
-                    2022-2024: Associate's degree of Science in Software Development, Bellevue College <br />
-                    2024-2026: Bachelor's degree of Science in Software Development, Bellevue College
-                </p>
-            </div>
-        </div>
+            <!-- Bio, Education, Experience Sections -->
+            <section class="row">
+                <!-- Bio Section -->
+                <div class="col-md-4">
+                    <h2 class="h5"><strong>Bio</strong></h2>
+                    <p>Hello, I'm Miles Griffith, a 21-year-old Software Development student. I'm a junior at Bellevue College, currently enrolled in the Software Development Bachelor's program. I'm interested in software development and have been learning since my sophomore year in high school.</p>
+                    <p>Outside of school, I enjoy reading various sci-fi and fantasy novels. My favorite webnovel is <i>The Lord of the Mysteries</i> by <i>Yuan Ye</i>. I also enjoy playing video games and watching movies.</p>
+                </div>
 
-        <!-- Experience Section -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="h5"><strong>Experience</strong></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+                <!-- Education Section -->
+                <div class="col-md-4">
+                    <h2 class="h5"><strong>Education</strong></h2>
+                    <p>2022-2024: Associate's degree in Software Development, Bellevue College <br />
+                        2024-2026: Bachelor's degree in Software Development, Bellevue College</p>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="col-md-4">
+                    <h2 class="h5"><strong>Experience</strong></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
