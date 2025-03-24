@@ -1,9 +1,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <h2>The Group</h2>
+            <p>
+                My group consists of 4 members, Vital Kyungu, Nathan Ross, Brooks Halliday, and myself. Our task was to create a prototype web app.
+
+                <br> 
+                Within the group I was responsible for much of the technical documentation and core development of the project. 
+                I designed and implemented the base website architecture using Sails.js, handling both frontend and backend development, while adding Bootstrap for styling, and postgresql for data storage. 
+                One part of my work involved building the ZIP system, which allows users to enter their ZIP code and retrieve location-based information using an external API, with results stored in a database for future reference. 
+                Additionally, I developed the Feedback system, enabling users to submit comments that are saved in the database.
+            </p>
+        </div>
+        <div class="col-md-12">
             <h2>The Project</h2>
             <p>
-                This quarter my group <em>TheMiddles</em> decided to make an app called E-Voter. 
+                
                 This project is a Sails.js web application designed to enhance civic engagement and government transparency by allowing users to watch legislative videos, vote on political topics, and provide feedback. 
                 The platform is built with Sails.js (Node.js framework) for the backend, SQLite for data storage, and Bootstrap for styling, ensuring a better user experience. 
                 It also integrates location-based services using ZIP code lookup APIs to tailor legislative content based on a user's region.
@@ -12,24 +24,31 @@
                 The application enables users to watch pre-recorded videos, cast votes on those videos, and submit feedback about the platform. 
                 Users can enter their ZIP code to receive localized information. Votes and feedback are stored in a database for analysis. Additionally, the app is accessible online using Cloudflare Tunnel or Ngrok, making it easy to share and use without complicated network configurations.
             </p>
-            <a href="#" class="btn btn-primary">Project Website</a> <!--Link WIP-->
+            <a href="http://mbgriffi.ddns.net/gp/" class="btn btn-primary">Project Website</a>
+            <a href="https://github.com/CrypticWaffles/TheMiddlesRepo" class="btn btn-primary">Project Repository</a>
         </div>
         <div class="col-md-12">
-            <h2>The Group</h2>
+            <h2>Project Experiences</h2>
             <p>
-                My group consists of 4 members, Vital Kyungu, Nathan Ross, Brooks Halliday, and myself.
 
             </p>
-            <h4>My Role</h4>
-            <p>
-                I was responsible for much of the technical documentation and core development of the project. 
-                I designed and implemented the base website architecture using Sails.js, handling both frontend and backend development while integrating Bootstrap for styling, and SQLite for data storage. 
-                A key part of my work involved building the ZIP system, which allows users to enter their ZIP code and retrieve location-based information using an external API, with results stored in a database for future reference. 
-                Additionally, I developed the Feedback system, enabling users to submit comments that are securely saved and managed.
-            </p>
         </div>
         <div class="col-md-12">
-            
+            <h2>Documentation</h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#doc1">
+                Toggle SRS Document
+            </button>
+        
+            <div id="doc1" class="collapse mt-3">
+                <iframe src="/docs/SRS.pdf" width="100%" height="600px"></iframe>
+            </div>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#doc2">
+                Toggle Team Charter Document
+            </button>
+        
+            <div id="doc2" class="collapse mt-3">
+                <iframe src="/docs/Team-Charter.pdf" width="100%" height="600px"></iframe>
+            </div>
         </div>
     </div>
 </div>
