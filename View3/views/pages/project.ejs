@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 g-3">
             <h2>The Group</h2>
             <p>
-                My group consists of 4 members, Vital Kyungu, Nathan Ross, Brooks Halliday, and myself. Our task was to create a prototype web app.
+                My group consisted of 4 members, Vital Kyungu, Nathan Ross, Brooks Halliday, and myself. Our task was to create a prototype web app.
 
                 <br> 
                 Within the group I was responsible for much of the technical documentation and core development of the project. 
@@ -12,40 +12,69 @@
                 Additionally, I developed the Feedback system, enabling users to submit comments that are saved in the database.
             </p>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 g-3">
             <h2>The Project</h2>
-            <p>
-                
+            <p> 
                 This project is a Sails.js web application designed to enhance civic engagement and government transparency by allowing users to watch legislative videos, vote on political topics, and provide feedback. 
                 The platform is built with Sails.js (Node.js framework) for the backend, SQLite for data storage, and Bootstrap for styling, ensuring a better user experience. 
                 It also integrates location-based services using ZIP code lookup APIs to tailor legislative content based on a user's region.
             </p>
             <p>
                 The application enables users to watch pre-recorded videos, cast votes on those videos, and submit feedback about the platform. 
-                Users can enter their ZIP code to receive localized information. Votes and feedback are stored in a database for analysis. Additionally, the app is accessible online using Cloudflare Tunnel or Ngrok, making it easy to share and use without complicated network configurations.
+                Users can enter their ZIP code to receive localized information. Votes and feedback are stored in a database for analysis.
+                To host the project we uploaded it to a google virtual machine running nginx as a proxy server.
             </p>
             <a href="http://mbgriffi.ddns.net/gp/" class="btn btn-primary">Project Website</a>
             <a href="https://github.com/CrypticWaffles/TheMiddlesRepo" class="btn btn-primary">Project Repository</a>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 g-3">
             <h2>Project Experiences</h2>
             <p>
-
+                Starting the project was a challenge, based on our project I knew we had to make our project run on a server and not just use straight html, css, and js.
+                Weels earlier in class we had to use the backend framework Sails.js, so i considered using that as the framework but, I had never worked with Sails.js before other than following along with an assignment in class.
+                Working on the project I found that sails was a lot simpler than it initially seemed. As long as I understood assets, views, and api, it was actually fairly simple to work with. 
+                In addition to that, we were also introduced to Bootstrap in class and decided to use it as a css framework.
+            </p>
+            <p>
+                The next main necessety for the project was to decide what to use as a database. Previously, in a different class i had worked with SQLite on a project so i suggested that to my group and we initially used it. 
+                It was fairly sikmple to set up and tehre was a ready made adapter to use with Sails.js. So we installed sails-sqlite3 into the project and began builing functions around it. 
+                Once we had the database setup, we were able to begin to add the rest of the features to the project. 
+            </p>
+            <p>
+                As a group we decided to split off each of the four main features, the zip code feature, the feedback feature, the video feature, and the voting feature.
+                Each of us the n picked one and went about implementing it. To start I decided to implement the zip code feature.
+                So, I located a free to use API full of ZIP code information called zippopotam. I then added AXIOS to the project to make the API calls, and then added the ZIP code feature to the project.
+                Overall it was a simple process. From it I leanred how to interact with API calls for foreign data and how to use AXIOS to make them. I also learned how to interact with a database in sails.js and about routes.
+            </p>
+            <img src="/images/zipcode.png" class="rounded" alt="backend code for zipcode feature" width="40%">
+            <img src="/images/zipcode2.png" class="rounded" alt="frontend code for zipcode feature" width="40%">
+            <p>
+                One of my Teammates edned up deciding to focus more on documentaion so I then volunteered to also do the Feedback feature. 
+                This was also a simple process. I learned how to use the database better and how to build a form to submit feedback. 
+            </p>
+            <img src="/images/feedback.png" class="rounded" alt="backend code for feedback feature" width="40%">
+            <p>
+                After all four of the main features of the project were completed we ran into our firast issue. Due to our general unfamiliarity with sails.js we were having some difficulty getting the project to run on our google virtual machine (GVM).
+                We tried to run the project locally and it worked fine, but when we tried to run it on our GVM it would not work. It constantly got stuck when tring to add sails-sqlite3 to the project. But we couldnt run our project without it as athats what the database was built with.
+                We tried many different things to fix it even trying to install tools to manually rebuild it. We eventually had to give up and look for alternatives.
+                The first idea was to host it soemwhere else. I eventually came across ngrok, render, and railway. Of them i was only able to get it to work with ngrok. However, ngrok was a tunneling program. It would open up a tunnel from the web to your local machine to access the project.
+                Due to how potentially unsafe that was and how it would also require that the machine running the project be constantly on during the grading period we decided to try something else. 
+                It took some time but we were able to rebuild the project using postgresql instead of SQLite. And then we were able to upload it to our GVM and get it to run. But configuring it to run along side the other sails project, my portfolio page for the class, was a challenge.
+                It kept trying to use the other projects assets and couldnt locate it's own. Eventually we were able to get it to work after debugging things for a few hours and rearranging where things were stored.
             </p>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 g-3">
             <h2>Documentation</h2>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#doc1">
                 Toggle SRS Document
             </button>
-        
             <div id="doc1" class="collapse mt-3">
                 <iframe src="/docs/SRS.pdf" width="100%" height="600px"></iframe>
             </div>
+
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#doc2">
                 Toggle Team Charter Document
             </button>
-        
             <div id="doc2" class="collapse mt-3">
                 <iframe src="/docs/Team-Charter.pdf" width="100%" height="600px"></iframe>
             </div>
